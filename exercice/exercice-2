@@ -1,0 +1,33 @@
+\begin{table}[]
+\begin{tabular}{lllll}
+propriété                  & Type         & entité         & Commentaire             & identifiant \\
+id                         & int          & authors        & AUTO\_INCREMENT,        & x           \\
+firstname                  & VARCHAR(255) & authors        & NOT NULL                &             \\
+lastname                   & VARCHAR(255) & authors        & NOT NULL                &             \\
+country                    & VARCHAR(255) & authors        & NOT NULL                &             \\
+date\_of\_birth            & DATE         & authors        & NOT NULL                &             \\
+date\_of\_death            & DATE         & authors        &                         &             \\
+id                         & Int          & editors        & AUTO\_INCREMENT         & x           \\
+name                       & VARCHAR(255) & editors        & NOT NULL                &             \\
+id                         & INT          & members        & AUTO\_INCREMENT         & x           \\
+firstname                  & VARCHAR(255) & members        & NOT NULL                &             \\
+lastname                   & VARCHAR(255) & members        & NOT NULL                &             \\
+email                      & VARCHAR(255) & members        & NOT NULL,UNIQUE         &             \\
+date\_of\_birth            & DATE         & members        & NOT NULL                &             \\
+registered                 & BOOLEAN      & members        & NOT NULL  DEFAULT FALSE &             \\
+id                         & INT          & books          & AUTO\_INCREMENT         & x           \\
+title                      & VARCHAR(255) & books          & NOT NULL                &             \\
+year                       & int          & books          & NOT NULL                &             \\
+author\_id                 & int          & books          & NOT NULL, FOREIGN KEY   &             \\
+isbn VARCHAR(255) NOT NULL & VARCHAR(255) & book\_editions & NOT NULL                & X           \\
+book\_id                   & INT          & book\_editions & NOT NULL, FOREIGN KEY   &             \\
+editor\_id                 & INT          & book\_editions & NOT NULL, FOREIGN KEY   &             \\
+publication\_date          & DATE         & book\_editions & NOT NULL                &             \\
+id                         & INT          & loans          & AUTO\_INCREMENT         & X           \\
+book\_edition\_isbn        & VARCHAR(255) & loans          & NOT NULL                &             \\
+member\_id                 & INT          & loans          & NOT NULL                &             \\
+loan\_date                 & DATE         & loans          & NOT NULL                &             \\
+return\_date               & DATE         & loans          & NOT NULL                &             \\
+is\_returned               & BOOLEAN      &                & NOT NULL DEFAULT FALSE  &            
+\end{tabular}
+\end{table}
